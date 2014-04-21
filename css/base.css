@@ -1,0 +1,60 @@
+body {
+  color: #34a68c;
+  font-family: sans-serif;
+  background: url("/img/bg.png");
+}
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+a {
+  color: #34a68c;
+}
+.head {
+  text-align: center;
+  height: 90px;
+}
+.head .logo {
+  height: 90px;
+}
+.content {
+  top: 90px;
+  bottom: 40px;
+  width: 100%;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  position: absolute;
+  overflow: auto;
+}
+.nohead .content {
+  top: 0;
+}
+.nonav .content {
+  bottom: 10px;
+}
+.nav {
+  background: url("/img/bg.png");
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+  bottom: 0;
+  z-index: 99;
+}
+.nav li {
+  width: 25%;
+  text-align: center;
+  color: #34a68c;
+  font-size: 12px;
+  float: left;
+}

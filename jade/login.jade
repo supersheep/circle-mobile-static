@@ -1,0 +1,29 @@
+extend layout
+
+block vars
+    - nonav = true
+
+block style
+    link(rel="stylesheet",href="/css/login.css")
+block content
+    .content-inner.login
+        .panel
+            .panel-inner
+                .row
+                    input#username(type='text',placeholder="用户名")
+                    i.icon-user
+                .row.lock-row
+                    input#password(type='password',placeholder="密 码")
+                    i.icon-lock
+                .row
+                    button.btn 登录
+
+block script
+    script.
+        $(".row").on("click",function(){
+            $(".row").removeClass("active");
+            $(this).addClass("active");
+        });
+        $(".row input").on("blur",function(){
+            $(".row").removeClass("active");
+        });

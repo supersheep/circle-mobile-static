@@ -1,0 +1,46 @@
+extend layout
+
+mixin item
+    li.item
+        a(href="#")
+            img.pic(src="/img/item-1.jpg")
+            .txt 巴洛克风情截至 ￥2320
+
+block style
+    link(rel="stylesheet",href="/css/collection.css")
+    link(rel="stylesheet",href="/css/swiper.css")
+
+block vars
+    - nohead = true
+
+block content
+    .slide
+        .swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    img(src="/img/slide-1.jpg")
+                .swiper-slide
+                    img(src="/img/slide-1.jpg")
+                .swiper-slide
+                    img(src="/img/slide-1.jpg")
+        .pagination
+            span.swiper-pagination-switch
+            span.swiper-pagination-switch
+            span.swiper-pagination-switch
+    ul.list
+        +item
+        +item
+        +item
+        +item
+        +item
+        +item
+        +item
+
+
+block script
+    script(src="/js/swiper.js")
+    script.
+        new Swiper('.swiper-container', {
+            pagination : '.pagination',
+            loop:true
+        });

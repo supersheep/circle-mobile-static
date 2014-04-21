@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        block vars
+        meta(name="viewport",content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+        title=title
+        link(rel="stylesheet",href="/css/base.css")
+        script(src="/js/zepto.js")
+        block style
+    - body_class = [];
+    - if(nonav) body_class.push("nonav")
+    - if(nohead) body_class.push("nohead")
+    - body_class = body_class.join(" ")
+    body(class=body_class)
+        if !nohead
+            .head
+                img.logo(src="/img/logo.png")
+        .content
+            block content
+        block script
+        if !nonav
+            ul.nav
+                li 轻彩宝
+                li 高级彩宝
+                li 品牌故事
+                li My CIRCLE

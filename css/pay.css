@@ -1,0 +1,65 @@
+.btns .btn {
+  color: #34a68c;
+  display: inline-block;
+  text-shadow: 0 0 10px #34a68c;
+  font-size: 20px;
+  margin-top: 20px;
+  -webkit-box-shadow: 2px 4px 7px #000;
+  box-shadow: 2px 4px 7px #000;
+  line-height: 44px;
+  text-align: center;
+  text-decoration: none;
+  height: 44px;
+  width: 120px;
+  -webkit-background-size: 120px 44px;
+  -moz-background-size: 120px 44px;
+  background-size: 120px 44px;
+  border: none;
+  background-color: transparent;
+}
+.btns .btn .text {
+  background: -webkit-linear-gradient(left, #fff, #34a68c);
+  background: -moz-linear-gradient(left, #fff, #34a68c);
+  background: -o-linear-gradient(left, #fff, #34a68c);
+  background: -ms-linear-gradient(left, #fff, #34a68c);
+  background: linear-gradient(to right, #fff, #34a68c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.head {
+  padding: 27px 0;
+}
+.head .logo {
+  height: 90px;
+}
+.msg {
+  border-top: 1px dashed #ccc;
+  border-bottom: 1px dashed #ccc;
+  background-color: rgba(255,255,255,0.05);
+  padding-top: 45px;
+  padding-bottom: 35px;
+  text-align: center;
+}
+.msg .cn {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+.msg .en {
+  font-size: 18px;
+}
+.btns {
+  margin-top: 42px;
+  text-align: center;
+}
+.btns .btn {
+  margin-left: 20px;
+  background-image: url("/img/pay-succ-btns.png");
+}
+.btns .btn .text {
+  margin-left: -25px;
+  font-size: 19px;
+  padding-left: 5px;
+}
+.btns .btn:nth-child(1) {
+  margin-left: 0;
+}

@@ -1,0 +1,20 @@
+extend layout
+
+block vars
+    - nohead = true
+    - nonav = true
+
+block style
+    link(rel="stylesheet",href="/css/pay.css")
+
+block content
+    .head
+        img.logo(src="/img/biglogo.png")
+    .msg
+        .cn 支付成功!
+        .en ORDER COMPLETE
+    .btns
+        .btn
+            .text 注册账号
+        .btn
+            .text 查看订单

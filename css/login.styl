@@ -1,0 +1,95 @@
+cyan = #4fb49c
+.content
+    background-image: url("/img/tile.png")
+
+.content-inner
+    padding: 15px 12px
+    height: calc(100% - 33px)
+
+.panel
+    background-color: rgba(255,255,255,0.3)
+    border-radius: 5px
+    height: 100%
+    .row
+        position: relative
+        margin: 0 26px
+        input
+            padding-left: 35px
+            font-size: 17px
+            box-sizing: border-box
+            display: block
+            height: 38px
+            border: 1px solid cyan
+            color: cyan
+            width: 100%
+            &::-webkit-input-placeholder
+                color: cyan
+        .btn
+            background-color: cyan
+            border-radius: 5px
+            border: 1px solid #fff
+            background-size: 100%
+            display: block
+            border: none
+            width: 120px
+            height: 44px
+            margin: 0 auto
+            padding: 0
+            text-indent: -999px
+            cursor: pointer
+    .login-btn,.reg-btn
+        margin-top: 65px
+
+$icons
+    background: url("/img/icons.png") no-repeat
+    background-position-y: -24px
+    background-size: 120px 48px
+    position: absolute
+    width: 24px
+    height: 24px
+    top: 6px
+    left: 8px
+
+.row.active
+    i
+        background-position-y: 0px
+    input
+        background-color: cyan
+        border-color: #fff
+        color: #fff
+        &::-webkit-input-placeholder
+            color: #fff
+
+.reg
+    .row
+        margin-bottom: 10px
+        .btn
+            margin-top: 25px
+            background-image: url("/img/btn-reg.png")
+    .panel-inner
+        padding-top: 29px
+
+.login
+    .row
+        margin-bottom: 27px
+        .btn
+            margin-top: 65px
+            background-image: url("/img/btn-login.png")
+    .panel-inner
+        padding-top: 75px
+
+.icon-user
+    @extend $icons
+    background-position-x: 0px
+.icon-lock
+    @extend $icons
+    background-position-x: -24px
+.icon-confirm
+    @extend $icons
+    background-position-x: -48px
+.icon-email
+    @extend $icons
+    background-position-x: -72px
+.icon-phone
+    @extend $icons
+    background-position-x: -96px

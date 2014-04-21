@@ -1,0 +1,44 @@
+extend layout
+
+block vars
+    - nohead = true
+
+block style
+    link(rel="stylesheet",href="/css/swiper.css")
+    link(rel="stylesheet",href="/css/detail.css")
+
+block content
+    .product
+        .slide
+            .swiper-container
+                .swiper-wrapper
+                    .swiper-slide
+                        img(src="/img/detail-slide-1.jpg")
+                    .swiper-slide
+                        img(src="/img/detail-slide-1.jpg")
+                    .swiper-slide
+                        img(src="/img/detail-slide-1.jpg")
+            .pagination
+                span.swiper-pagination-switch
+                span.swiper-pagination-switch
+                span.swiper-pagination-switch
+        .purchase
+            .name 红宝石18K铂金项链
+            .desc 长丝织成; 用蚕丝或人造丝纯织或交织而成
+            .count-label 数量：
+            .count-control
+                .btn.minus -
+                input.input(type="phone")
+                .btn.plus +
+            a.buy(href="#")
+                .text 立即购买
+    .detail
+        img(src="/img/detail.jpg")
+
+block script
+    script(src="/js/swiper.js")
+    script.
+        new Swiper('.swiper-container', {
+            pagination : '.pagination',
+            loop:true
+        });
