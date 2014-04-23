@@ -52,6 +52,11 @@
 }
 .product {
   zoom: 1;
+  -webkit-box-shadow: 4px 0px 10px #000;
+  box-shadow: 4px 0px 10px #000;
+  z-index: 9;
+  position: relative;
+  overflow: hidden;
 }
 .product:before,
 .product:after {
@@ -126,5 +131,6 @@
   background-image: url("/img/purchase-btn.png");
 }
 .detail img {
+  display: block;
   width: 100%;
 }

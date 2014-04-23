@@ -6,14 +6,11 @@ block vars
 block style
     link(rel="stylesheet",href="/css/login.css")
 block content
-    .content-inner.reg
+    form.content-inner.reg
         .panel
             .panel-inner
                 .row
-                    input#username(type='text',placeholder="用户名")
-                    i.icon-user
-                .row
-                    input#email(type='text',placeholder="邮箱")
+                    input#email(type='email',placeholder="注册邮箱")
                     i.icon-email
                 .row
                     input#password(type='password',placeholder="密码")
@@ -22,7 +19,7 @@ block content
                     input#confirm(type='password',placeholder="确认密码")
                     i.icon-confirm
                 .row
-                    input#phone(type='text',placeholder="手机号码")
+                    input#phone(type='tel',placeholder="手机号码")
                     i.icon-phone
                 .row
                     button.btn 立即注册
@@ -35,4 +32,28 @@ block script
         });
         $(".row input").on("blur",function(){
             $(".row").removeClass("active");
+        });
+        $("form").on("submit",function(){
+            var email = $("#email").val().trim();
+            var password = $("#password").val().trim();
+            var confirm = $("#confirm").val().trim();
+            var phone = $("#phone").val().trim();
+            var rules = [
+                [email,"请填写注册邮箱"],
+                [/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email),"邮箱格式不符合规范"],
+                [password,"请填写密码"],
+                [confirm,"请确认密码"],
+                [password === confirm,"两次密码输入不匹配"],
+                [phone,"请输入手机号"],
+                [/^1\d{10}/.test(phone),"无效的手机号格式"]
+            ];
+
+            for(var i = 0; i < rules.length; i++){
+                if(!rules[i][0]){
+                    alert(rules[i][1]);
+                    break;
+                    return false;
+                }
+            }
+            return true;
         });

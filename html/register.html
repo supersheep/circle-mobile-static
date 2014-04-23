@@ -1,7 +1,75 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"><title></title><link rel="stylesheet" href="/css/base.css"><script src="/js/zepto.js"></script><link rel="stylesheet" href="/css/login.css"></head><body class="nonav"><div class="head"><img src="/img/logo.png" class="logo"></div><div class="content"><div class="content-inner reg"><div class="panel"><div class="panel-inner"><div class="row"><input id="username" type="text" placeholder="用户名"><i class="icon-user"></i></div><div class="row"><input id="email" type="text" placeholder="邮箱"><i class="icon-email"></i></div><div class="row"><input id="password" type="password" placeholder="密码"><i class="icon-lock"></i></div><div class="row"><input id="confirm" type="password" placeholder="确认密码"><i class="icon-confirm"></i></div><div class="row"><input id="phone" type="text" placeholder="手机号码"><i class="icon-phone"></i></div><div class="row"><button class="btn">立即注册</button></div></div></div></div></div><script>$(".row").on("click",function(){
-    $(".row").removeClass("active");
-    $(this).addClass("active");
-});
-$(".row input").on("blur",function(){
-    $(".row").removeClass("active");
-});</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" href="/css/base.css">
+    <script src="/js/zepto.js"></script>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body class="nonav">
+    <div class="head">
+        <img src="/img/logo.png" class="logo">
+    </div>
+    <div class="content">
+        <form class="content-inner reg">
+            <div class="panel">
+                <div class="panel-inner">
+                    <div class="row">
+                        <input id="email" type="email" placeholder="注册邮箱"><i class="icon-email"></i>
+                    </div>
+                    <div class="row">
+                        <input id="password" type="password" placeholder="密码"><i class="icon-lock"></i>
+                    </div>
+                    <div class="row">
+                        <input id="confirm" type="password" placeholder="确认密码"><i class="icon-confirm"></i>
+                    </div>
+                    <div class="row">
+                        <input id="phone" type="tel" placeholder="手机号码"><i class="icon-phone"></i>
+                    </div>
+                    <div class="row">
+                        <button class="btn">立即注册</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        $(".row").on("click", function() {
+            $(".row").removeClass("active");
+            $(this).addClass("active");
+        });
+        $(".row input").on("blur", function() {
+            $(".row").removeClass("active");
+        });
+        $("form").on("submit", function() {
+            var email = $("#email").val().trim();
+            var password = $("#password").val().trim();
+            var confirm = $("#confirm").val().trim();
+            var phone = $("#phone").val().trim();
+            var rules = [
+                [email, "请填写注册邮箱"],
+                [/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email), "邮箱格式不符合规范"],
+                [password, "请填写密码"],
+                [confirm, "请确认密码"],
+                [password === confirm, "两次密码输入不匹配"],
+                [phone, "请输入手机号"],
+                [/^1\d{10}/.test(phone), "无效的手机号格式"]
+            ];
+
+            for (var i = 0; i < rules.length; i++) {
+                if (!rules[i][0]) {
+                    alert(rules[i][1]);
+                    break;
+                    return false;
+                }
+            }
+            return true;
+        });
+    </script>
+</body>
+
+</html>

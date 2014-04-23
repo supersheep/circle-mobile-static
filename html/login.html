@@ -1,7 +1,62 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"><title></title><link rel="stylesheet" href="/css/base.css"><script src="/js/zepto.js"></script><link rel="stylesheet" href="/css/login.css"></head><body class="nonav"><div class="head"><img src="/img/logo.png" class="logo"></div><div class="content"><div class="content-inner login"><div class="panel"><div class="panel-inner"><div class="row"><input id="username" type="text" placeholder="用户名"><i class="icon-user"></i></div><div class="row lock-row"><input id="password" type="password" placeholder="密 码"><i class="icon-lock"></i></div><div class="row"><button class="btn">登录</button></div></div></div></div></div><script>$(".row").on("click",function(){
-    $(".row").removeClass("active");
-    $(this).addClass("active");
-});
-$(".row input").on("blur",function(){
-    $(".row").removeClass("active");
-});</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" href="/css/base.css">
+    <script src="/js/zepto.js"></script>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body class="nonav">
+    <div class="head">
+        <img src="/img/logo.png" class="logo">
+    </div>
+    <div class="content">
+        <form class="content-inner login">
+            <div class="panel">
+                <div class="panel-inner">
+                    <div class="row">
+                        <input id="email" type="email" placeholder="登录邮箱"><i class="icon-email"></i>
+                    </div>
+                    <div class="row lock-row">
+                        <input id="password" type="password" placeholder="密 码"><i class="icon-lock"></i>
+                    </div>
+                    <div class="row">
+                        <button class="btn">登录</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        $(".row").on("click", function() {
+            $(".row").removeClass("active");
+            $(this).addClass("active");
+        });
+        $(".row input").on("blur", function() {
+            $(".row").removeClass("active");
+        });
+        $("form").on("submit", function() {
+            var email = $("#email").val().trim();
+            var password = $("#password").val().trim();
+            if (!email) {
+                alert("请输入邮箱");
+                return false;
+            }
+            if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
+                alert("邮箱格式不符合规范");
+                return false;
+            }
+            if (!password) {
+                alert("请输入密码");
+                return false;
+            }
+            return true;
+        });
+    </script>
+</body>
+
+</html>

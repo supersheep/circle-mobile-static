@@ -5,6 +5,8 @@ var component = require('gulp-component');
 var connect = require('gulp-connect');
 var rename = require('gulp-rename');
 var changed = require('gulp-changed');
+var prettify = require('gulp-prettify');
+var imagemin = require('gulp-imagemin');
 var nib = require('nib');
 process.on("uncaughtException",function(err){
     console.log(err,err.stack);
@@ -16,6 +18,12 @@ gulp.task('connect',function(){
         livereload: true
     });
 });
+
+gulp.task('image',function(){
+    gulp.src(['./img/*'])
+        .pipe(imagemin())
+        .pipe(gulp.dest("./img/"));
+})
 
 
 gulp.task('stylus', function(){
@@ -34,6 +42,7 @@ gulp.task('jade', function(){
     var source = gulp.src(["./jade/*.jade","!./jade/*layout.jade"])
         .pipe(changed('./html/', { extension: '.html' }))
         .pipe(jade())
+        .pipe(prettify({indentSize:4}))
         .pipe(gulp.dest("html/"))
         .pipe(connect.reload());
 
@@ -51,4 +60,4 @@ gulp.task('watch', function () {
   gulp.watch(["./css/*.styl"], ['stylus']);
 });
 
-gulp.task('default', ['stylus','jade','watch','connect']);
+gulp.task('default', ['stylus','image','jade','watch','connect']);
