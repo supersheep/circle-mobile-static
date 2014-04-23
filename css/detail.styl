@@ -1,3 +1,4 @@
+@import "mixins"
 purchase_padding = 7px
 
 .product
@@ -55,7 +56,9 @@ purchase_padding = 7px
         .buy
             @extend $btn
             background-image: url("/img/purchase-btn.png")
-
+            .text
+                background-image: linear-gradient(left, cyan, #fff)
+                background-position: 0 0
 
 .detail
     img

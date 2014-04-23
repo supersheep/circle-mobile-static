@@ -58,20 +58,35 @@ a {
   font-size: 12px;
   float: left;
 }
+@-moz-keyframes bling {
+  0% {
+    background-position: 120px 0;
+  }
+  40% {
+    background-position: 0 0;
+  }
+}
 @-webkit-keyframes bling {
   0% {
-    background: -webkit-linear-gradient(left, #fff, #34a68c);
-    background: -moz-linear-gradient(left, #fff, #34a68c);
-    background: -o-linear-gradient(left, #fff, #34a68c);
-    background: -ms-linear-gradient(left, #fff, #34a68c);
-    background: linear-gradient(to right, #fff, #34a68c);
+    background-position: 120px 0;
   }
-
-  100% {
-    background: -webkit-linear-gradient(left, #34a68c, #fff);
-    background: -moz-linear-gradient(left, #34a68c, #fff);
-    background: -o-linear-gradient(left, #34a68c, #fff);
-    background: -ms-linear-gradient(left, #34a68c, #fff);
-    background: linear-gradient(to right, #34a68c, #fff);
+  40% {
+    background-position: 0 0;
+  }
+}
+@-o-keyframes bling {
+  0% {
+    background-position: 120px 0;
+  }
+  40% {
+    background-position: 0 0;
+  }
+}
+@keyframes bling {
+  0% {
+    background-position: 120px 0;
+  }
+  40% {
+    background-position: 0 0;
   }
 }

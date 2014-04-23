@@ -32,10 +32,9 @@ gulp.task('stylus', function(){
         import : ["nib","variables","mixins"]
     };
     gulp.src(["./css/*.styl"])
-        .pipe(changed('./css/', { extension: '.css' }))
+        // .pipe(changed('./css/', { extension: '.css' }))
         .pipe(stylus(stylusOptions))
-        .pipe(gulp.dest('./css'))
-        .pipe(connect.reload());
+        .pipe(gulp.dest('./css/'));
 });
 
 gulp.task('jade', function(){
@@ -60,4 +59,4 @@ gulp.task('watch', function () {
   gulp.watch(["./css/*.styl"], ['stylus']);
 });
 
-gulp.task('default', ['stylus','image','jade','watch','connect']);
+gulp.task('default', ['stylus','jade','watch','connect']);
