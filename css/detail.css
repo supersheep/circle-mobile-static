@@ -18,7 +18,7 @@
   background-color: transparent;
 }
 .product .purchase .buy .text {
-  margin: 0 20px;
+  margin: 0 15px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: bling 2s infinite;
@@ -67,7 +67,7 @@
   background-color: transparent;
 }
 .product .purchase .buy .text {
-  margin: 0 20px;
+  margin: 0 15px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: bling 2s infinite;
@@ -169,6 +169,8 @@
 }
 .product .purchase .count-control .input {
   background-color: #272a2b;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   text-align: center;
   float: left;
   width: 68px;

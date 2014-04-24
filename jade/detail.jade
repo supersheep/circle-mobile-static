@@ -28,7 +28,7 @@ block content
             .count-label 数量：
             .count-control
                 .btn.minus -
-                input.input(type="tel",value="1")
+                input#count.input(type="tel",value="1")
                 .btn.plus +
             a.buy(href="#")
                 .text 立即购买
@@ -44,4 +44,14 @@ block script
         new Swiper('.swiper-container', {
             pagination : '.pagination',
             loop:true
+        });
+
+        $(".plus").on("click",function(){
+            var newval = +$("#count").val() + 1;
+            $("#count").val(newval);
+        });
+        $(".minus").on("click",function(){
+            var newval = +$("#count").val() - 1;
+            newval = newval < 1 ? 1 : newval;
+            $("#count").val(newval);
         });
