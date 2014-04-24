@@ -1,5 +1,5 @@
 .content {
-  background-image: url("/img/tile.png");
+  background-image: url("../img/tile.png");
 }
 .content-inner {
   padding: 15px 12px;
@@ -83,7 +83,7 @@
 }
 .reg .row .btn {
   margin-top: 25px;
-  background-image: url("/img/btn-reg.png");
+  background-image: url("../img/btn-reg.png");
 }
 .reg .panel-inner {
   padding-top: 29px;
@@ -93,7 +93,7 @@
 }
 .login .row .btn {
   margin-top: 65px;
-  background-image: url("/img/btn-login.png");
+  background-image: url("../img/btn-login.png");
 }
 .login .panel-inner {
   padding-top: 75px;

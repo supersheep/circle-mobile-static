@@ -1,7 +1,7 @@
 body {
   color: #34a68c;
   font-family: sans-serif;
-  background: url("/img/bg.png");
+  background: url("../img/bg.png");
 }
 body,
 ul,
@@ -44,7 +44,7 @@ a {
   bottom: 10px;
 }
 .nav {
-  background: url("/img/bg.png");
+  background: url("../img/bg.png");
   position: fixed;
   width: 100%;
   padding: 10px 0;
