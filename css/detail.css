@@ -18,6 +18,7 @@
   background-color: transparent;
 }
 .product .purchase .buy .text {
+  margin: 0 20px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: bling 2s infinite;
@@ -66,6 +67,7 @@
   background-color: transparent;
 }
 .product .purchase .buy .text {
+  margin: 0 20px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: bling 2s infinite;
@@ -175,11 +177,11 @@
   background-image: url("/img/purchase-btn.png");
 }
 .product .purchase .buy .text {
-  background-image: -webkit-linear-gradient(left, #34a68c, #fff);
-  background-image: -moz-linear-gradient(left, #34a68c, #fff);
-  background-image: -o-linear-gradient(left, #34a68c, #fff);
-  background-image: -ms-linear-gradient(left, #34a68c, #fff);
-  background-image: linear-gradient(to right, #34a68c, #fff);
+  background-image: -webkit-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: -moz-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: -o-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: -ms-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: linear-gradient(to right, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
   background-position: 0 0;
 }
 .detail img {
