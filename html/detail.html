@@ -7,6 +7,14 @@
     <title></title>
     <link rel="stylesheet" href="/css/base.css">
     <script src="/js/zepto.js"></script>
+    <script>
+        (function() {
+            var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+            if (isAndroid) {
+                $("html").addClass("android");
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="/css/swiper.css">
     <link rel="stylesheet" href="/css/detail.css">
 </head>
@@ -40,7 +48,7 @@
                     <input id="count" type="tel" value="1" class="input">
                     <div class="btn plus">+</div>
                 </div>
-                <a href="#" class="buy">
+                <a href="#" class="btn buy">
                     <div class="text">立即购买</div>
                 </a>
             </div>
@@ -70,10 +78,14 @@
         });
     </script>
     <ul class="nav">
-        <li>轻彩宝</li>
-        <li>高级彩宝</li>
-        <li>品牌故事</li>
-        <li>My CIRCLE</li>
+        <li><a href="/html/collection.html">轻彩宝</a>
+        </li>
+        <li><a href="/html/collection.html">高级彩宝</a>
+        </li>
+        <li><a href="/html/brand.html">品牌故事</a>
+        </li>
+        <li><a href="/html/">My CIRCLE</a>
+        </li>
     </ul>
 </body>
 

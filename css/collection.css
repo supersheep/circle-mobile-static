@@ -19,6 +19,8 @@
   margin-left: 0;
 }
 .pagination .swiper-active-switch {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   background-color: #34a68c;
   border-color: #fff;
 }

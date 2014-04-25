@@ -7,6 +7,13 @@ html(lang="en")
         title=title
         link(rel="stylesheet",href="/css/base.css")
         script(src="/js/zepto.js")
+        script.
+            (function(){
+                var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+                if (isAndroid) {
+                  $("html").addClass("android");
+                }
+            })();
         block style
     - body_class = [];
     - if(nonav) body_class.push("nonav")
@@ -21,7 +28,11 @@ html(lang="en")
         block script
         if !nonav
             ul.nav
-                li 轻彩宝
-                li 高级彩宝
-                li 品牌故事
-                li My CIRCLE
+                li 
+                    a(href="/html/collection.html") 轻彩宝
+                li 
+                    a(href="/html/collection.html") 高级彩宝
+                li 
+                    a(href="/html/brand.html") 品牌故事
+                li 
+                    a(href="/html/") My CIRCLE

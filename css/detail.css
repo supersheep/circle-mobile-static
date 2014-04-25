@@ -19,6 +19,11 @@
 }
 .product .purchase .buy .text {
   margin: 0 15px;
+  background-image: -webkit-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: -moz-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: -o-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: -ms-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: linear-gradient(to right, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: bling 2s infinite;
@@ -44,6 +49,8 @@
   margin-left: 0;
 }
 .product .pagination .swiper-active-switch {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   background-color: #34a68c;
   border-color: #fff;
 }
@@ -68,6 +75,11 @@
 }
 .product .purchase .buy .text {
   margin: 0 15px;
+  background-image: -webkit-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: -moz-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: -o-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: -ms-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: linear-gradient(to right, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: bling 2s infinite;
@@ -93,6 +105,8 @@
   margin-left: 0;
 }
 .product .pagination .swiper-active-switch {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   background-color: #34a68c;
   border-color: #fff;
 }
@@ -119,8 +133,8 @@
   left: 0;
   width: 182px;
   margin-right: 7px;
-  -webkit-box-shadow: 4px 0px 10px #000;
-  box-shadow: 4px 0px 10px #000;
+  -webkit-box-shadow: 3px 0px 8px rgba(0,0,0,0.3);
+  box-shadow: 3px 0px 8px rgba(0,0,0,0.3);
 }
 .product .slide .swiper-container,
 .product .slide .swiper-slide {
@@ -135,9 +149,9 @@
   height: 25px;
 }
 .product .purchase {
-  margin-left: 189px;
+  margin-left: 182px;
   font-size: 12px;
-  padding-right: 7px;
+  padding: 0 1em;
 }
 .product .purchase .name {
   margin: 16px 0 12px 0;
@@ -191,14 +205,6 @@
 }
 .product .purchase .buy {
   background-image: url("../img/purchase-btn.png");
-}
-.product .purchase .buy .text {
-  background-image: -webkit-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
-  background-image: -moz-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
-  background-image: -o-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
-  background-image: -ms-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
-  background-image: linear-gradient(to right, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
-  background-position: 0 0;
 }
 .detail img {
   display: block;

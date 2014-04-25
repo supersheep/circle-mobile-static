@@ -32,11 +32,7 @@ a {
   top: 90px;
   bottom: 40px;
   width: 100%;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  background-size: contain;
   position: absolute;
-  overflow: auto;
 }
 .nohead .content {
   top: 0;
@@ -58,6 +54,11 @@ a {
   color: #34a68c;
   font-size: 12px;
   float: left;
+}
+.android .btn .text {
+  background-image: none !important;
+  -webkit-background-clip: border-box !important;
+  -webkit-text-fill-color: #34a68c !important;
 }
 @-moz-keyframes bling {
   0% {
