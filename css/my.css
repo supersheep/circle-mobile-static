@@ -1,8 +1,12 @@
 body {
   color: #0aa291;
 }
+.content{
+  position: static;
+}
 .content-inner {
   padding-top: 14px;
+  padding-bottom: 40px;
   height: calc(100% - 14px);
   background-image: url("/img/tile.png");
   -webkit-background-size: contain;

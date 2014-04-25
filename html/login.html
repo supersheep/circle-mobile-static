@@ -7,6 +7,14 @@
     <title></title>
     <link rel="stylesheet" href="/css/base.css">
     <script src="/js/zepto.js"></script>
+    <script>
+        (function() {
+            var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+            if (isAndroid) {
+                $("html").addClass("android");
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="/css/login.css">
 </head>
 

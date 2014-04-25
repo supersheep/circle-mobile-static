@@ -7,6 +7,14 @@
     <title></title>
     <link rel="stylesheet" href="/css/base.css">
     <script src="/js/zepto.js"></script>
+    <script>
+        (function() {
+            var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+            if (isAndroid) {
+                $("html").addClass("android");
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="/css/my.css">
 </head>
 
@@ -72,14 +80,51 @@
                         </div>
                     </div>
                 </div>
+                <div class="order">
+                    <img src="/img/order.jpg" class="pic">
+                    <div class="info">
+                        <div class="code">订单编号 7586245890241</div>
+                        <div class="name">缘点/CIRCLE铂金殴泊石戒指</div>
+                        <div class="pay">
+                            <div class="price">总价 ￥5559</div>
+                            <div class="status">未付款</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order">
+                    <img src="/img/order.jpg" class="pic">
+                    <div class="info">
+                        <div class="code">订单编号 7586245890241</div>
+                        <div class="name">缘点/CIRCLE铂金殴泊石戒指</div>
+                        <div class="pay">
+                            <div class="price">总价 ￥5559</div>
+                            <div class="status">未付款</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order">
+                    <img src="/img/order.jpg" class="pic">
+                    <div class="info">
+                        <div class="code">订单编号 7586245890241</div>
+                        <div class="name">缘点/CIRCLE铂金殴泊石戒指</div>
+                        <div class="pay">
+                            <div class="price">总价 ￥5559</div>
+                            <div class="status">未付款</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <ul class="nav">
-        <li>轻彩宝</li>
-        <li>高级彩宝</li>
-        <li>品牌故事</li>
-        <li>My CIRCLE</li>
+        <li><a href="/html/collection.html">轻彩宝</a>
+        </li>
+        <li><a href="/html/collection.html">高级彩宝</a>
+        </li>
+        <li><a href="/html/brand.html">品牌故事</a>
+        </li>
+        <li><a href="/html/my.html">My CIRCLE</a>
+        </li>
     </ul>
 </body>
 
