@@ -19,6 +19,7 @@ li {
 }
 a {
   color: #34a68c;
+  text-decoration: none;
 }
 .head {
   text-align: center;
