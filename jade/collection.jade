@@ -3,8 +3,10 @@ extend layout
 mixin item
     li.item
         a(href="#")
-            img.pic(src="/img/item-1.jpg")
-            .txt 巴洛克风情截至 ￥2320
+            img.pic(src="/img/collection-item.jpg")
+            .txt 
+                .title 红宝石镶钻项链 
+                .price ￥2320
 
 block style
     link(rel="stylesheet",href="/css/collection.css")
@@ -14,19 +16,19 @@ block vars
     - nohead = true
 
 block content
-    .slide
-        .swiper-container
-            .swiper-wrapper
-                .swiper-slide
-                    img(src="/img/slide-1.jpg")
-                .swiper-slide
-                    img(src="/img/slide-1.jpg")
-                .swiper-slide
-                    img(src="/img/slide-1.jpg")
-        .pagination
-            span.swiper-pagination-switch
-            span.swiper-pagination-switch
-            span.swiper-pagination-switch
+    //- .slide
+    //-     .swiper-container
+    //-         .swiper-wrapper
+    //-             .swiper-slide
+    //-                 img(src="/img/slide-1.jpg")
+    //-             .swiper-slide
+    //-                 img(src="/img/slide-1.jpg")
+    //-             .swiper-slide
+    //-                 img(src="/img/slide-1.jpg")
+    //-     .pagination
+    //-         span.swiper-pagination-switch
+    //-         span.swiper-pagination-switch
+    //-         span.swiper-pagination-switch
     ul.list
         +item
         +item
@@ -40,7 +42,7 @@ block content
 block script
     script(src="/js/swiper.js")
     script.
-        new Swiper('.swiper-container', {
-            pagination : '.pagination',
-            loop:true
-        });
+        //- new Swiper('.swiper-container', {
+        //-     pagination : '.pagination',
+        //-     loop:true
+        //- });
