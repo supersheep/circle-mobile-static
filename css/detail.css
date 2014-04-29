@@ -1,55 +1,3 @@
-.product .pagination {
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  z-index: 9;
-}
-.product .pagination span {
-  height: 5px;
-  width: 5px;
-  margin-left: 7px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #888;
-  background-color: #fff;
-  display: inline-block;
-}
-.product .pagination span:nth-child(1) {
-  margin-left: 0;
-}
-.product .pagination .swiper-active-switch {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #34a68c;
-  border-color: #fff;
-}
-.product .pagination {
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  z-index: 9;
-}
-.product .pagination span {
-  height: 5px;
-  width: 5px;
-  margin-left: 7px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #888;
-  background-color: #fff;
-  display: inline-block;
-}
-.product .pagination span:nth-child(1) {
-  margin-left: 0;
-}
-.product .pagination .swiper-active-switch {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #34a68c;
-  border-color: #fff;
-}
 body {
   color: #333;
   background: #fff;
@@ -70,6 +18,9 @@ body {
 .product:after {
   clear: both;
 }
+.product .slide {
+  border-bottom: 2px solid #34a68c;
+}
 .product .slide .swiper-container,
 .product .slide .swiper-slide {
   width: 100%;
@@ -80,7 +31,7 @@ body {
   width: 100%;
 }
 .product .pagination {
-  height: 25px;
+  display: none;
 }
 .product .arrows {
   z-index: 9;
