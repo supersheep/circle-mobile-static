@@ -15,37 +15,63 @@ block content
                     .swiper-slide
                         img(src="/img/detail-slide-1.jpg")
                     .swiper-slide
-                        img(src="/img/detail-slide-1.jpg")
+                        img(src="/img/detail-2.jpg")
                     .swiper-slide
-                        img(src="/img/detail-slide-1.jpg")
+                        img(src="/img/detail-3.jpg")
+
+            .arrows
+                img.prev(src="/img/arrow-left.png")
+                img.next(src="/img/arrow-right.png")
             .pagination
                 span.swiper-pagination-switch
                 span.swiper-pagination-switch
                 span.swiper-pagination-switch
-        .purchase
-            .name 红宝石18K铂金项链
-            .desc 长丝织成; 用蚕丝或人造丝纯织或交织而成
-            .count-label 数量：
-            .count-control
-                .btn.minus -
-                input#count.input(type="tel",value="1")
-                .btn.plus +
-            a.btn.buy(href="#")
-                .text 立即购买
+
+    table.table
+        tr
+            td(class="name") 商品名称
+            td 心形天然红宝石镶嵌钻石18K铂金项链
+        tr
+            td 基本参数
+            td 缅甸产天然红宝石0.30ct / 钻石0.05ct / 18K铂金  吊坠10mm*8mm / 项链长400mm
+        tr
+            td 制造地
+            td 日本
+        tr
+            td 价格
+            td 2980
+
+    a.buy(href="#")
+        img.btn(src="/img/detail-buy.png")
     .detail
         img(src="/img/detail-1.jpg")
         img(src="/img/detail-2.jpg")
         img(src="/img/detail-3.jpg")
-        img(src="/img/detail-4.jpg")
+
+    .manufacturing
+        .title
+            .cn 制作过程
+            .en Manufacturing operation
+        img.pic(src="/img/detail-manufacturing.jpg")
+        p.content Love Talk红宝石镶钻项链由日本设计师青沼知行先生设计并在日本制造加工而成。珍贵天然红宝石产自缅甸,青沼家族在日本从事高级珠宝设计与制作的历史80余年历史，在日本久负盛名。此款红宝石项链是CIRCLE与青沼达成在中国的独家售卖权,有日本专业机构珠宝鉴定证书。
 
 block script
     script(src="/js/swiper.js")
     script.
-        new Swiper('.swiper-container', {
+        var swiper = new Swiper('.swiper-container', {
             pagination : '.pagination',
             loop:true
         });
 
+
+        $(".prev").on("click",function(){
+            swiper.swipePrev();
+        });
+
+        $(".next").on("click",function(){
+            swiper.swipeNext();
+        });
+        
         $(".plus").on("click",function(){
             var newval = +$("#count").val() + 1;
             $("#count").val(newval);
