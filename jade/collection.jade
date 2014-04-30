@@ -4,9 +4,10 @@ block vars
     - nohead = true
 
 mixin item(cls,index)
+    - if(index < 10){ index = ("0" + index)}
     li(class="item " + cls)
         a(href="#")
-            img.pic(src="/img/collection-"+ index +".jpg")
+            img.pic(src="/img/collection_0_"+ index +".jpg")
             .txt 
                 .title 红宝石镶钻项链 
                 .price ￥2320
@@ -18,15 +19,16 @@ block style
 block content
     ul.list
         +item("right",1)
-        +item("right",2)
+        +item("left",2)
         +item("right",3)
         +item("left",4)
-        +item("right",5)
-        +item("left",6)
-        +item("right",7)
+        +item("left",5)
+        +item("right",6)
+        +item("left",7)
         +item("right",8)
-        +item("right",9)
-        +item("left",10)
+        +item("left",9)
+        +item("right",10)
+        +item("right",11)
 
 
 block script
