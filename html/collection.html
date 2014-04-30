@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="/css/base.css">
     <script src="/js/zepto.js"></script>
     <script>
+        var startTime = +new Date;
         (function() {
             var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
             if (isAndroid) {
                 $("html").addClass("android");
             }
         })();
+        $(window).on("load", function() {
+            alert("加载耗时" + (+new Date - startTime) / 1000 + "s")
+        });
     </script>
     <link rel="stylesheet" href="/css/collection.css">
     <link rel="stylesheet" href="/css/swiper.css">
@@ -22,63 +26,90 @@
 <body class="nohead">
     <div class="content">
         <ul class="list">
-            <li class="item">
+            <li class="item right">
                 <a href="#">
-                    <img src="/img/collection-item.jpg" class="pic" />
+                    <img src="/img/collection-1.jpg" class="pic" />
                     <div class="txt">
                         <div class="title">红宝石镶钻项链</div>
                         <div class="price">￥2320</div>
                     </div>
                 </a>
             </li>
-            <li class="item">
+            <li class="item right">
                 <a href="#">
-                    <img src="/img/collection-item.jpg" class="pic" />
+                    <img src="/img/collection-2.jpg" class="pic" />
                     <div class="txt">
                         <div class="title">红宝石镶钻项链</div>
                         <div class="price">￥2320</div>
                     </div>
                 </a>
             </li>
-            <li class="item">
+            <li class="item right">
                 <a href="#">
-                    <img src="/img/collection-item.jpg" class="pic" />
+                    <img src="/img/collection-3.jpg" class="pic" />
                     <div class="txt">
                         <div class="title">红宝石镶钻项链</div>
                         <div class="price">￥2320</div>
                     </div>
                 </a>
             </li>
-            <li class="item">
+            <li class="item left">
                 <a href="#">
-                    <img src="/img/collection-item.jpg" class="pic" />
+                    <img src="/img/collection-4.jpg" class="pic" />
                     <div class="txt">
                         <div class="title">红宝石镶钻项链</div>
                         <div class="price">￥2320</div>
                     </div>
                 </a>
             </li>
-            <li class="item">
+            <li class="item right">
                 <a href="#">
-                    <img src="/img/collection-item.jpg" class="pic" />
+                    <img src="/img/collection-5.jpg" class="pic" />
                     <div class="txt">
                         <div class="title">红宝石镶钻项链</div>
                         <div class="price">￥2320</div>
                     </div>
                 </a>
             </li>
-            <li class="item">
+            <li class="item left">
                 <a href="#">
-                    <img src="/img/collection-item.jpg" class="pic" />
+                    <img src="/img/collection-6.jpg" class="pic" />
                     <div class="txt">
                         <div class="title">红宝石镶钻项链</div>
                         <div class="price">￥2320</div>
                     </div>
                 </a>
             </li>
-            <li class="item">
+            <li class="item right">
                 <a href="#">
-                    <img src="/img/collection-item.jpg" class="pic" />
+                    <img src="/img/collection-7.jpg" class="pic" />
+                    <div class="txt">
+                        <div class="title">红宝石镶钻项链</div>
+                        <div class="price">￥2320</div>
+                    </div>
+                </a>
+            </li>
+            <li class="item right">
+                <a href="#">
+                    <img src="/img/collection-8.jpg" class="pic" />
+                    <div class="txt">
+                        <div class="title">红宝石镶钻项链</div>
+                        <div class="price">￥2320</div>
+                    </div>
+                </a>
+            </li>
+            <li class="item right">
+                <a href="#">
+                    <img src="/img/collection-9.jpg" class="pic" />
+                    <div class="txt">
+                        <div class="title">红宝石镶钻项链</div>
+                        <div class="price">￥2320</div>
+                    </div>
+                </a>
+            </li>
+            <li class="item left">
+                <a href="#">
+                    <img src="/img/collection-10.jpg" class="pic" />
                     <div class="txt">
                         <div class="title">红宝石镶钻项链</div>
                         <div class="price">￥2320</div>

@@ -3,10 +3,10 @@ extend layout
 block vars
     - nohead = true
 
-mixin item
-    li.item
+mixin item(cls,index)
+    li(class="item " + cls)
         a(href="#")
-            img.pic(src="/img/collection-item.jpg")
+            img.pic(src="/img/collection-"+ index +".jpg")
             .txt 
                 .title 红宝石镶钻项链 
                 .price ￥2320
@@ -16,27 +16,17 @@ block style
     link(rel="stylesheet",href="/css/swiper.css")
 
 block content
-    //- .slide
-    //-     .swiper-container
-    //-         .swiper-wrapper
-    //-             .swiper-slide
-    //-                 img(src="/img/slide-1.jpg")
-    //-             .swiper-slide
-    //-                 img(src="/img/slide-1.jpg")
-    //-             .swiper-slide
-    //-                 img(src="/img/slide-1.jpg")
-    //-     .pagination
-    //-         span.swiper-pagination-switch
-    //-         span.swiper-pagination-switch
-    //-         span.swiper-pagination-switch
     ul.list
-        +item
-        +item
-        +item
-        +item
-        +item
-        +item
-        +item
+        +item("right",1)
+        +item("right",2)
+        +item("right",3)
+        +item("left",4)
+        +item("right",5)
+        +item("left",6)
+        +item("right",7)
+        +item("right",8)
+        +item("right",9)
+        +item("left",10)
 
 
 block script

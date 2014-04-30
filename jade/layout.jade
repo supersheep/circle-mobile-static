@@ -8,12 +8,16 @@ html(lang="en")
         link(rel="stylesheet",href="/css/base.css")
         script(src="/js/zepto.js")
         script.
+            var startTime = +new Date;
             (function(){
                 var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
                 if (isAndroid) {
                   $("html").addClass("android");
                 }
             })();
+            $(window).on("load",function(){
+                alert("加载耗时" +  (+new Date - startTime) / 1000  + "s")
+            });
         block style
     - body_class = [];
     - if(nonav) body_class.push("nonav")
