@@ -15,9 +15,9 @@ html(lang="en")
                   $("html").addClass("android");
                 }
             })();
-            //- $(window).on("load",function(){
-            //-     alert("加载耗时" +  (+new Date - startTime) / 1000  + "s")
-            //- });
+            $(window).on("load",function(){
+                alert("加载耗时" +  (+new Date - startTime) / 1000  + "s")
+            });
         block style
     - body_class = [];
     - if(nonav) body_class.push("nonav")
