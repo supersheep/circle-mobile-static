@@ -33,7 +33,7 @@ gulp.task('stylus', function(){
     };
     gulp.src(["./css/*.styl"])
         // .pipe(changed('./css/', { extension: '.css' }))
-        .pipe(stylus(stylusOptions))
+        .pipe(stylus())
         .pipe(gulp.dest('./css/'));
 });
 

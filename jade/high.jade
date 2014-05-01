@@ -1,0 +1,22 @@
+extend layout
+
+block vars
+    - nohead = true
+    - nonav = true
+
+block style
+    link(rel="stylesheet",href="/css/pay.css")
+
+block content
+    .head
+        img.logo(src="/img/biglogo.png")
+    .msg
+        .wait
+            |CIRCLE高级珠宝只接受预订，
+            br
+            |不日将一一呈现
+            br
+            |亲爱的你请耐心等待
+    .btns
+        .btn
+            .text 点此返回
