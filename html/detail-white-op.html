@@ -30,13 +30,13 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="/img/detail-slide-1.jpg">
+                            <img src="/img/Dtail_white_op_ring_00.jpg">
                         </div>
                         <div class="swiper-slide">
-                            <img src="/img/detail-2.jpg">
+                            <img src="/img/Dtail_white_op_ring_00.jpg">
                         </div>
                         <div class="swiper-slide">
-                            <img src="/img/detail-3.jpg">
+                            <img src="/img/Dtail_white_op_ring_00.jpg">
                         </div>
                     </div>
                 </div>
@@ -49,19 +49,19 @@
         </div>
         <table class="table">
             <tr>
-                <td class="fname w4">商 品 名 称</td>
-                <td>心形天然红宝石镶嵌钻石18K铂金项链</td>
+                <td class="fname w4">商品名称</td>
+                <td>{多变之美} 黑欧泊钻石戒指</td>
             </tr>
             <tr>
-                <td class="fname w4">基 本 参 数</td>
-                <td>缅甸产天然红宝石0.30ct / 钻石0.05ct / 18K铂金 吊坠10mm*8mm / 项链长400mm</td>
+                <td class="fname w4">主要材质</td>
+                <td>戒圈18K金 / 戒面黑欧泊石0.24ct</td>
             </tr>
             <tr>
-                <td class="fname w3">制 造 地</td>
+                <td class="fname w3">制造地</td>
                 <td>日本</td>
             </tr>
             <tr>
-                <td class="fname w2">价 格</td>
+                <td class="fname w2">价格</td>
                 <td>2980</td>
             </tr>
         </table>
@@ -69,17 +69,21 @@
             <img src="/img/detail-buy.png" class="btn">
         </a>
         <div class="detail">
-            <img src="/img/detail-1.jpg">
-            <img src="/img/detail-2.jpg">
-            <img src="/img/detail-3.jpg">
-        </div>
-        <div class="manufacturing">
-            <div class="title">
-                <div class="cn">制作过程</div>
-                <div class="en">Manufacturing operation</div>
+            <div class="quote">
+                <p class="center">“如果您未曾见过黑欧泊，您的确错过了一次精彩，
+                    <br>她像彩色水银般华理，图案闪烁夜空。
+                    <br>或许您漫游了世界，看见过很多，
+                    <br>但神秘欧泊中的景色只会出现在美妙的梦境中。”</p>
+                <p class="right">——拉瑞·哈森</p>
             </div>
-            <img src="/img/detail-manufacturing.jpg" class="pic">
-            <p class="content">Love Talk红宝石镶钻项链由日本设计师青沼知行先生设计并在日本制造加工而成。珍贵天然红宝石产自缅甸,青沼家族在日本从事高级珠宝设计与制作的历史80余年历史，在日本久负盛名。此款红宝石项链是CIRCLE与青沼达成在中国的独家售卖权,有日本专业机构珠宝鉴定证书。</p>
+            <img src="/img/Dtail_white_op_ring_01.jpg">
+            <img src="/img/Dtail_white_op_ring_02.jpg">
+            <img src="/img/Dtail_white_op_ring_03.jpg">
+            <p class="quote center">欧泊被鱼尾集宝石之美于一身的{宝石皇后}
+                <br>戒面为产自澳大利亚的黑欧泊宝石
+                <br>黑欧泊是世界上最高品质的欧泊</p>
+            <img src="/img/Dtail_white_op_ring_04.jpg">
+            <img src="/img/Dtail_white_op_ring_05.jpg">
         </div>
     </div>
     <script src="/js/swiper.js"></script>
@@ -90,22 +94,12 @@
         });
 
 
-        $(".prev").on("click", function() {
+        $(".prev").on("touchend", function() {
             swiper.swipePrev();
         });
 
-        $(".next").on("click", function() {
+        $(".next").on("touchend", function() {
             swiper.swipeNext();
-        });
-
-        $(".plus").on("click", function() {
-            var newval = +$("#count").val() + 1;
-            $("#count").val(newval);
-        });
-        $(".minus").on("click", function() {
-            var newval = +$("#count").val() - 1;
-            newval = newval < 1 ? 1 : newval;
-            $("#count").val(newval);
         });
     </script>
     <ul class="nav">

@@ -24,10 +24,11 @@ body {
 .product .slide .swiper-container,
 .product .slide .swiper-slide {
   width: 100%;
-  height: 220px;
+  height: 210px;
 }
 .product .slide .swiper-container img,
 .product .slide .swiper-slide img {
+  display: block;
   width: 100%;
 }
 .product .pagination {
@@ -41,32 +42,42 @@ body {
 }
 .product .arrows .prev,
 .product .arrows .next {
+  padding: 92px 15px;
   width: 14px;
   height: 25px;
   position: absolute;
-  top: 94px;
 }
 .product .arrows .prev {
-  left: 10px;
+  left: 0;
 }
 .product .arrows .next {
-  right: 10px;
+  right: 0;
 }
 .table {
   font-size: 12px;
-  padding: 40px 20px;
+  padding: 40px 22px 35px 22px;
 }
 .table td {
-  padding-bottom: 10px;
   vertical-align: top;
 }
-.table .name {
-  width: 60px;
+.table td.fname {
+  width: 50px;
+  padding-right: 15px;
+}
+.table td.w4 {
+  word-spacing: -3px;
+}
+.table td.w3 {
+  word-spacing: 3px;
+}
+.table td.w2 {
+  word-spacing: 21px;
 }
 .buy {
   zoom: 1;
   display: block;
-  margin-bottom: 13px;
+  margin: 0 5px 8px 5px;
+  border-bottom: 1px solid #34a68c;
 }
 .buy:before,
 .buy:after {
@@ -78,25 +89,27 @@ body {
 }
 .buy .btn {
   float: right;
-  margin-right: 5px;
+  margin-bottom: 5px;
   width: 134px;
 }
-.detail {
-  padding-bottom: 14px;
-  border-bottom: 1px solid #34a68c;
-  border-top: 1px solid #34a68c;
-  margin: 0 5px 24px 5px;
+.detail .quote {
+  font-size: 12px;
+  padding: 25px 22px 20px 22px;
+}
+.detail p {
+  font-size: 12px;
 }
 .detail img {
   display: block;
   width: 100%;
 }
 .manufacturing {
-  padding: 0 5px;
+  border-top: 1px solid #34a68c;
+  margin: 24px 5px 0 5px;
 }
 .manufacturing .title {
   border-left: 2px solid #34a68c;
-  margin: 10px 0;
+  margin: 15px 0 10px 0;
   padding: 0 5px;
 }
 .manufacturing .title .cn {
@@ -108,10 +121,9 @@ body {
 .manufacturing .pic {
   width: 100%;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
 }
 .manufacturing .content {
   font-size: 12px;
-  font-family: STSong, serif;
   line-height: 1.5;
 }

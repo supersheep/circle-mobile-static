@@ -14,6 +14,9 @@ p {
   margin: 0;
   padding: 0;
 }
+p {
+  line-height: 1.5;
+}
 li {
   list-style-type: none;
 }
@@ -57,6 +60,9 @@ a {
 }
 .center {
   text-align: center;
+}
+.right {
+  text-align: right;
 }
 .android .btn .text {
   background-image: none !important;

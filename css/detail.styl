@@ -16,8 +16,9 @@ body
         border-bottom: 2px solid cyan
         .swiper-container,.swiper-slide
             width: 100%
-            height: 220px
+            height: 210px
             img
+                display: block
                 width: 100%
     .pagination
         display: none
@@ -27,51 +28,58 @@ body
         top: 0
         width: 100%
         .prev,.next
+            padding: 92px 15px
             width: 14px
             height: 25px
             position: absolute
-            top: 94px
         .prev
-            // background: url("/img/arrow-left.png")
-            left: 10px
+            left: 0
         .next
-            // background: url("/img/arrow-right.png")
-            right: 10px
+            right: 0
                 
 
 .table
     font-size: 12px
-    padding: 40px 20px
+    padding: 40px 22px 35px 22px
     td
-        padding-bottom: 10px
         vertical-align: top
-    .name 
-        width: 60px
+        &.fname
+            width: 50px
+            padding-right: 15px
+        &.w4
+            word-spacing: -3px
+        &.w3
+            word-spacing: 3px
+        &.w2
+            word-spacing: 21px
 
 .buy
     clearfix()
     display: block
-    margin-bottom: 13px 
+    margin: 0 5px 8px 5px 
+    border-bottom: 1px solid cyan
     .btn
         float: right
-        margin-right: 5px
+        margin-bottom: 5px
         width: 134px
 
 .detail
-    padding-bottom: 14px
-    border-bottom: 1px solid cyan
-    border-top: 1px solid cyan
-    margin: 0 5px 24px 5px
+    .quote
+        font-size: 12px
+        padding: 25px 22px 20px 22px
+    p
+        font-size: 12px
     img
         display: block
         width: 100%
 
 
 .manufacturing
-    padding: 0 5px
+    border-top: 1px solid cyan
+    margin: 24px 5px 0 5px
     .title
         border-left: 2px solid cyan
-        margin: 10px 0
+        margin: 15px 0 10px 0
         padding: 0 5px
         .cn
             font-size: 14px
@@ -81,8 +89,7 @@ body
     .pic
         width: 100%
         display: block
-        margin-bottom: 5px
+        margin-bottom: 12px
     .content
         font-size: 12px
-        font-family: STSong, serif
         line-height: 1.5

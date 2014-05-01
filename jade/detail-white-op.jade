@@ -1,0 +1,85 @@
+extend layout
+
+block vars
+    - nohead = true
+
+block style
+    link(rel="stylesheet",href="/css/swiper.css")
+    link(rel="stylesheet",href="/css/detail.css")
+
+block content
+    .product
+        .slide
+            .swiper-container
+                .swiper-wrapper
+                    .swiper-slide
+                        img(src="/img/Dtail_white_op_ring_00.jpg")
+                    .swiper-slide
+                        img(src="/img/Dtail_white_op_ring_00.jpg")
+                    .swiper-slide
+                        img(src="/img/Dtail_white_op_ring_00.jpg")
+            .pagination
+            .arrows
+                img.prev(src="/img/arrow-left.png")
+                img.next(src="/img/arrow-right.png")
+
+    table.table
+        tr
+            td.fname.w4 商品名称
+            td {多变之美} 黑欧泊钻石戒指
+        tr
+            td.fname.w4 主要材质
+            td 戒圈18K金 / 戒面黑欧泊石0.24ct 
+        tr
+            td.fname.w3 制造地
+            td 日本
+        tr
+            td.fname.w2 价格
+            td 2980
+
+    a.buy(href="#")
+        img.btn(src="/img/detail-buy.png")
+
+    .detail
+        .quote
+            p.center 
+                | “如果您未曾见过黑欧泊，您的确错过了一次精彩，
+                br
+                | 她像彩色水银般华理，图案闪烁夜空。
+                br
+                | 或许您漫游了世界，看见过很多，
+                br
+                | 但神秘欧泊中的景色只会出现在美妙的梦境中。”
+            p.right
+                ——拉瑞·哈森
+        img(src="/img/Dtail_white_op_ring_01.jpg")
+        img(src="/img/Dtail_white_op_ring_02.jpg")
+        img(src="/img/Dtail_white_op_ring_03.jpg")
+
+        p.quote.center
+            | 欧泊被鱼尾集宝石之美于一身的{宝石皇后}
+            br
+            | 戒面为产自澳大利亚的黑欧泊宝石
+            br
+            | 黑欧泊是世界上最高品质的欧泊
+        img(src="/img/Dtail_white_op_ring_04.jpg")
+        img(src="/img/Dtail_white_op_ring_05.jpg")
+
+
+    
+block script
+    script(src="/js/swiper.js")
+    script.
+        var swiper = new Swiper('.swiper-container', {
+            pagination : '.pagination',
+            loop:true
+        });
+
+
+        $(".prev").on("touchend",function(){
+            swiper.swipePrev();
+        });
+
+        $(".next").on("touchend",function(){
+            swiper.swipeNext();
+        });
