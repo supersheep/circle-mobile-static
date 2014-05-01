@@ -55,6 +55,9 @@ a {
   font-size: 12px;
   float: left;
 }
+.center {
+  text-align: center;
+}
 .android .btn .text {
   background-image: none !important;
   -webkit-background-clip: border-box !important;
