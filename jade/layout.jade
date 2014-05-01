@@ -2,10 +2,11 @@ doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
+        - var t = +new Date
         block vars
         meta(name="viewport",content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
         title=title
-        link(rel="stylesheet",href="/css/base.css")
+        link(rel="stylesheet",href="/css/base.css?t=#{t}")
         script(src="/js/zepto.js")
         script.
             var startTime = +new Date;
@@ -33,10 +34,10 @@ html(lang="en")
         if !nonav
             ul.nav
                 li 
-                    a(href="/html/collection.html") 轻彩宝
+                    a(href="/html/collection.html?t=#{t}") 轻彩宝
                 li 
-                    a(href="/html/collection.html") 高级彩宝
+                    a(href="/html/collection.html?t=#{t}") 高级彩宝
                 li 
-                    a(href="/html/brand.html") 品牌故事
+                    a(href="/html/brand.html?t=#{t}") 品牌故事
                 li 
-                    a(href="/html/my.html") My CIRCLE
+                    a(href="/html/my.html?t=#{t}") My CIRCLE
