@@ -1,0 +1,30 @@
+mixin slides
+    .slide
+        .swiper-container
+            .swiper-wrapper
+                block
+        .pagination
+        .arrows
+            img.prev(src="/img/arrow-left.png")
+            img.next(src="/img/arrow-right.png")
+
+mixin slide-item(src)
+    .swiper-slide
+        img(src="#{src}")
+
+
+mixin slide-init
+    script.
+        var swiper = new Swiper('.swiper-container', {
+            pagination : '.pagination',
+            loop:true
+        });
+
+
+        $(".prev").on("click",function(){
+            swiper.swipePrev();
+        });
+
+        $(".next").on("click",function(){
+            swiper.swipeNext();
+        });

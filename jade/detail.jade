@@ -9,20 +9,10 @@ block style
 
 block content
     .product
-        .slide
-            .swiper-container
-                .swiper-wrapper
-                    .swiper-slide
-                        img(src="/img/detail-slide-1.jpg")
-                    .swiper-slide
-                        img(src="/img/detail-2.jpg")
-                    .swiper-slide
-                        img(src="/img/detail-3.jpg")
-            .pagination
-            .arrows
-                img.prev(src="/img/arrow-left.png")
-                img.next(src="/img/arrow-right.png")
-
+        +slides
+            +slide-item("/img/detail-slide-1.jpg")
+            +slide-item("/img/detail-2.jpg")
+            +slide-item("/img/detail-3.jpg")
     table.table
         tr
             td.fname.w4 商 品 名 称
@@ -53,21 +43,8 @@ block content
 
 block script
     script(src="/js/swiper.js")
+    +slide-init
     script.
-        var swiper = new Swiper('.swiper-container', {
-            pagination : '.pagination',
-            loop:true
-        });
-
-
-        $(".prev").on("click",function(){
-            swiper.swipePrev();
-        });
-
-        $(".next").on("click",function(){
-            swiper.swipeNext();
-        });
-        
         $(".plus").on("click",function(){
             var newval = +$("#count").val() + 1;
             $("#count").val(newval);
