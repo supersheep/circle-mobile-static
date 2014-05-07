@@ -1,14 +1,7 @@
-body
-    color: rgb(10,162,145)
-
-.content
-    position: static
-
 .content-inner
     padding-top: 14px
-    padding-bottom: 40px
     height: calc(100% - 14px)
-    background-image: url("/img/tile.png")
+    background-image: url("../img/tile.png")
     background-size: contain
 
 
@@ -17,23 +10,21 @@ body
     font-size: 16px
     height: 100%
     overflow: scroll
-    padding-bottom: 40px
-    font-size: 100
+    font-weight: 100
 
 .order
     padding: 15px 7px
-    border-bottom: 1px dashed #333
-    .pic
-        float: left
-        width: 88px
-        height: 88px
-        margin-right: 10px
-    .info
-        line-height: 1.5
-        .pay
-            clearfix()
+    .product
+        clearfix()
+        border-bottom: 1px dashed #333
+        .pic
+            float: left
+            width: 88px
+            height: 88px
+            margin-right: 10px
+        .info
+            line-height: 1.5
             margin-top: 20px
-            .price
-                float: left
-            .status
-                float: right
+            font-size: 14px
+    .order-detail
+        border-bottom: 1px dashed #333

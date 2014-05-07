@@ -18,13 +18,15 @@
   background-color: transparent;
 }
 .btns .btn .text {
-  background: -webkit-linear-gradient(left, #fff, #34a68c);
-  background: -moz-linear-gradient(left, #fff, #34a68c);
-  background: -o-linear-gradient(left, #fff, #34a68c);
-  background: -ms-linear-gradient(left, #fff, #34a68c);
-  background: linear-gradient(to right, #fff, #34a68c);
+  margin: 0 15px;
+  background-image: -webkit-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: -moz-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: -o-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: -ms-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: linear-gradient(to right, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-animation: bling 2s infinite;
 }
 .head {
   padding: 27px 0;
@@ -33,8 +35,8 @@
   height: 90px;
 }
 .msg {
-  border-top: 1px dashed #ccc;
-  border-bottom: 1px dashed #ccc;
+  border-top: 1px dashed #434546;
+  border-bottom: 1px dashed #434546;
   background-color: rgba(255,255,255,0.05);
   padding-top: 45px;
   padding-bottom: 35px;
@@ -57,7 +59,7 @@
 }
 .btns .btn {
   margin-left: 20px;
-  background-image: url("/img/pay-succ-btns.png");
+  background-image: url("../img/pay-succ-btns.png");
 }
 .btns .btn .text {
   margin-left: -25px;

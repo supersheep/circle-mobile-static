@@ -1,14 +1,7 @@
-body {
-  color: #0aa291;
-}
-.content{
-  position: static;
-}
 .content-inner {
   padding-top: 14px;
-  padding-bottom: 40px;
   height: calc(100% - 14px);
-  background-image: url("/img/tile.png");
+  background-image: url("../img/tile.png");
   -webkit-background-size: contain;
   -moz-background-size: contain;
   background-size: contain;
@@ -18,36 +11,34 @@ body {
   font-size: 16px;
   height: 100%;
   overflow: scroll;
-  font-size: 100;
+  font-weight: 100;
 }
 .order {
   padding: 15px 7px;
+}
+.order .product {
+  zoom: 1;
   border-bottom: 1px dashed #333;
 }
-.order .pic {
+.order .product:before,
+.order .product:after {
+  content: "";
+  display: table;
+}
+.order .product:after {
+  clear: both;
+}
+.order .product .pic {
   float: left;
   width: 88px;
   height: 88px;
   margin-right: 10px;
 }
-.order .info {
+.order .product .info {
   line-height: 1.5;
-}
-.order .info .pay {
-  zoom: 1;
   margin-top: 20px;
+  font-size: 14px;
 }
-.order .info .pay:before,
-.order .info .pay:after {
-  content: "";
-  display: table;
-}
-.order .info .pay:after {
-  clear: both;
-}
-.order .info .pay .price {
-  float: left;
-}
-.order .info .pay .status {
-  float: right;
+.order .order-detail {
+  border-bottom: 1px dashed #333;
 }

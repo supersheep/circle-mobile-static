@@ -1,76 +1,34 @@
 extend layout
 
+
+mixin order(pic,code,price,name,status,time)
+    .order
+        .product
+            img.pic(src=pic)
+            .info
+                .name 商品名称： #{name}
+                .price 商品金额： ￥#{price}
+        .order-detail
+            .code 订单编号： #{code}
+            .time 成交时间：#{time}
+            .status 订单状态： #{status}
+            - if(status=="等待付款")
+                .func 订单操作：
+                    span {付款}
+                    span {取消}
+
 block style
     link(rel="stylesheet",href="/css/my.css")
 
 block content
     .content-inner
         .orders
-            .order
-                img.pic(src="/img/order.jpg")
-                .info
-                    .code 订单编号 7586245890241
-                    .name 缘点/CIRCLE铂金殴泊石戒指
-                    .pay
-                        .price 总价 ￥5559
-                        .status 未付款
-            .order
-                img.pic(src="/img/order.jpg")
-                .info
-                    .code 订单编号 7586245890241
-                    .name 缘点/CIRCLE铂金殴泊石戒指
-                    .pay
-                        .price 总价 ￥5559
-                        .status 未付款
-            .order
-                img.pic(src="/img/order.jpg")
-                .info
-                    .code 订单编号 7586245890241
-                    .name 缘点/CIRCLE铂金殴泊石戒指
-                    .pay
-                        .price 总价 ￥5559
-                        .status 未付款
-            .order
-                img.pic(src="/img/order.jpg")
-                .info
-                    .code 订单编号 7586245890241
-                    .name 缘点/CIRCLE铂金殴泊石戒指
-                    .pay
-                        .price 总价 ￥5559
-                        .status 未付款
-
-            .order
-                img.pic(src="/img/order.jpg")
-                .info
-                    .code 订单编号 7586245890241
-                    .name 缘点/CIRCLE铂金殴泊石戒指
-                    .pay
-                        .price 总价 ￥5559
-                        .status 未付款
-
-            .order
-                img.pic(src="/img/order.jpg")
-                .info
-                    .code 订单编号 7586245890241
-                    .name 缘点/CIRCLE铂金殴泊石戒指
-                    .pay
-                        .price 总价 ￥5559
-                        .status 未付款
-
-            .order
-                img.pic(src="/img/order.jpg")
-                .info
-                    .code 订单编号 7586245890241
-                    .name 缘点/CIRCLE铂金殴泊石戒指
-                    .pay
-                        .price 总价 ￥5559
-                        .status 未付款
-
-            .order
-                img.pic(src="/img/order.jpg")
-                .info
-                    .code 订单编号 7586245890241
-                    .name 缘点/CIRCLE铂金殴泊石戒指
-                    .pay
-                        .price 总价 ￥5559
-                        .status 未付款
+            +order("/img/order.jpg","7586245890241",5559,"珍珠18K黄金戒指","等待付款","2014/05/08")
+            +order("/img/order.jpg","7586245890241",5559,"珍珠18K黄金戒指","交易成功","2014/05/08")
+            +order("/img/order.jpg","7586245890241",5559,"珍珠18K黄金戒指","退款成功","2014/05/08")
+            +order("/img/order.jpg","7586245890241",5559,"珍珠18K黄金戒指","已付款","2014/05/08")
+            +order("/img/order.jpg","7586245890241",5559,"珍珠18K黄金戒指","等待付款","2014/05/08")
+            +order("/img/order.jpg","7586245890241",5559,"珍珠18K黄金戒指","等待付款","2014/05/08")
+            +order("/img/order.jpg","7586245890241",5559,"珍珠18K黄金戒指","等待付款","2014/05/08")
+            +order("/img/order.jpg","7586245890241",5559,"珍珠18K黄金戒指","等待付款","2014/05/08")
+            +order("/img/order.jpg","7586245890241",5559,"珍珠18K黄金戒指","等待付款","2014/05/08")
