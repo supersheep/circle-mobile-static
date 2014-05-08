@@ -11,6 +11,27 @@
   border-radius: 5px;
   height: 100%;
 }
+.panel .links {
+  zoom: 1;
+  margin: -16px 28px 0 28px;
+}
+.panel .links:before,
+.panel .links:after {
+  content: "";
+  display: table;
+}
+.panel .links:after {
+  clear: both;
+}
+.panel .links .left {
+  float: left;
+}
+.panel .links .right {
+  float: right;
+}
+.panel .links a {
+  color: #fff;
+}
 .panel .row {
   position: relative;
   margin: 0 26px;
