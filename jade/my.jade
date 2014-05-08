@@ -3,19 +3,19 @@ extend layout
 
 mixin order(pic,code,price,name,status,time)
     .order
+        .order-detail
+            .row.code 订单编号：#{code}
+            .row.time 成交时间：#{time}
+            .row.status 订单状态：#{status}
+            - if(status=="等待付款")
+                .row.func 订单操作：
+                    span {付款} 
+                    span {取消} 
         .product
             img.pic(src=pic)
             .info
                 .name 商品名称： #{name}
                 .price 商品金额： ￥#{price}
-        .order-detail
-            .code 订单编号： #{code}
-            .time 成交时间：#{time}
-            .status 订单状态： #{status}
-            - if(status=="等待付款")
-                .func 订单操作：
-                    span {付款}
-                    span {取消}
 
 block style
     link(rel="stylesheet",href="/css/my.css")

@@ -42,7 +42,7 @@ body {
   zoom: 1;
   display: block;
   margin: 0 5px;
-  border-bottom: 2px solid #34a68c;
+  border-bottom: 2px solid #25a58e;
 }
 .buy:before,
 .buy:after {
@@ -69,11 +69,11 @@ body {
   width: 100%;
 }
 .manufacturing {
-  border-top: 1px solid #34a68c;
+  border-top: 1px solid #25a58e;
   margin: 24px 5px 0 5px;
 }
 .manufacturing .title {
-  border-left: 2px solid #34a68c;
+  border-left: 2px solid #25a58e;
   margin: 15px 0 10px 0;
   padding: 0 5px;
 }

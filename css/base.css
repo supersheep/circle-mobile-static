@@ -1,5 +1,5 @@
 body {
-  color: #34a68c;
+  color: #25a58e;
   font-family: sans-serif;
   background: url("../img/bg.png");
 }
@@ -21,7 +21,7 @@ li {
   list-style-type: none;
 }
 a {
-  color: #34a68c;
+  color: #25a58e;
   text-decoration: none;
 }
 .head {
@@ -54,7 +54,7 @@ a {
 .nav li {
   width: 25%;
   text-align: center;
-  color: #34a68c;
+  color: #25a58e;
   font-size: 12px;
   float: left;
 }
@@ -67,10 +67,10 @@ a {
 .android .btn .text {
   background-image: none !important;
   -webkit-background-clip: border-box !important;
-  -webkit-text-fill-color: #34a68c !important;
+  -webkit-text-fill-color: #25a58e !important;
 }
 .slide {
-  border-bottom: 2px solid #34a68c;
+  border-bottom: 2px solid #25a58e;
 }
 .slide .swiper-container,
 .slide .swiper-slide {
