@@ -3,41 +3,27 @@ extend layout
 block vars
     - nohead = true
 
-mixin item(cls,index,rgb)
-    - color = rgb ? ("rgba(" + rgb.join(",") + ",0.3)") : "rgba(209,203,191,0.3)"
-    - if(index < 10){ index = ("0" + index)}
-    li(class="item " + cls)
+mixin item(index)
+    li.item
         a(href="#")
-            img.pic(src="/img/collection_0_"+ index +".jpg")
-            .txt(style="background-color:#{color}")
-                .txt-inner
-                    .title 红宝石镶钻项链 
-                    .price ￥2320
-                    img.arr(src="/img/right-arr-circle.png")
+            img.pic(src="/img/love_"+ index +".jpg")
+            .txt
+                .title 红宝石镶钻项链 
+                .price ￥2320
 
 block style
     link(rel="stylesheet",href="/css/collection.css")
     link(rel="stylesheet",href="/css/swiper.css")
 
 block content
-    +slides
-        +slide-item("/img/mothers-day.jpg")
-        +slide-item("/img/mothers-day.jpg")
-        +slide-item("/img/mothers-day.jpg")
     ul.list
-        +item("right",1)
-        +item("left",2)
-        +item("right",3)
-        +item("left",4,[187,201,195])
-        +item("left",5,[167,179,170])
-        +item("right",6,[189,203,199])
-        +item("left",7,[144,161,161])
-        +item("right",8,[111,128,127])
-        +item("left",9,[98,115,111])
-        +item("left",10,[168,182,181])
-        +item("right",11,[168,182,181])
-
-
-block script
-    script(src="/js/swiper.js")
-    +slide-init
+        +item(1)
+        +item(2)
+        +item(3)
+        +item(4)
+        +item(5)
+        +item(6)
+        +item(7)
+        +item(8)
+        +item(9)
+        +item(10)

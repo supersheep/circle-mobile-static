@@ -1,42 +1,46 @@
 .list {
-  padding-bottom: 40px;
+  zoom: 1;
+  padding-bottom: 34px;
 }
-.item {
-  position: relative;
-  border-bottom: 1px solid #fff;
+.list:before,
+.list:after {
+  content: "";
+  display: table;
 }
-.item .pic {
-  width: 100%;
-  display: block;
+.list:after {
+  clear: both;
 }
-.item .txt {
-  color: #fff;
-  position: absolute;
-  width: 100px;
-  font-size: 14px;
-  height: 100%;
-  top: 0;
-  text-align: left;
+.list .item {
+  background-color: #fff;
+  width: 160px;
+  float: left;
+  border: 1px solid #2c2c2b;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-.item .txt .txt-inner {
-  position: absolute;
-  padding: 5px;
-  top: 75px;
+.list .item .pic {
+  height: 220px;
+}
+.list .item .txt {
+  height: 74px;
+}
+.list .item .txt .title {
+  text-align: center;
+  margin-top: 12px;
   font-size: 12px;
+  color: #2c2c2b;
 }
-.item .txt .title {
-  margin-bottom: 5px;
-}
-.item .txt .arr {
-  width: 22px;
-  height: 22px;
-  position: absolute;
-  right: 0;
-  top: 24px;
-}
-.item.left .txt {
-  left: 0;
-}
-.item.right .txt {
-  right: 0;
+.list .item .txt .price {
+  color: #fff;
+  background-color: #2c2c2b;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  margin: 15px auto 0 auto;
+  width: 58px;
+  font-size: 12px;
 }
