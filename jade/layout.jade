@@ -26,9 +26,12 @@ html(lang="en")
     - if(nohead) body_class.push("nohead")
     - body_class = body_class.join(" ")
     body(class=body_class)
-        if !nohead
+        if !nohead && !newhead
             .head
                 img.logo(src="/img/logo.png")
+        if newhead
+            .head(style="height:auto")
+                img(src="/img/new-nav.png",style="width:100%")
         .content
             block content
         block script
